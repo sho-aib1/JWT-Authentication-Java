@@ -1,0 +1,46 @@
+Pass Authorization header and Content-Type headers where ever required.
+------------------------------------------------------------------------
+POST: Login/Generate Token
+http://localhost:8091/api/login
+Request object:
+----------------
+{
+	"userName": "admin3",
+	"password": "777"
+}
+========================================
+POST: Create new role
+http://localhost:8091/api/roles
+Request object:
+-----------------
+{
+	"roleName": "admin"
+}
+========================================
+GET: All roles
+http://localhost:8091/api/roles
+========================================
+POST: Register user
+http://localhost:8091/api/register
+Request object:
+-----------------
+{
+	"username": "user3",
+	"password": "777",
+	"email": "user@gmail.com",
+
+	"roles": [
+			{"id": 100}
+		]
+}
+=======================================
+GET: Get current user details
+http://localhost:8091/api/currentUser
+=======================================
+GET: hello api User Role
+http://localhost:8091/api/home/user
+=======================================
+
+GET: hello api Admin Role
+http://localhost:8091/api/home/admin
+=======================================
